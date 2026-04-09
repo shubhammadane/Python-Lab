@@ -1,6 +1,6 @@
-# 🐍 Python Lab Submission (Practical 1–12)
+# 🐍 Python Lab Submission (Practical 1–13)
 
-## 📘 Student Information
+## 📘 Student Details
 
 * **Name:** Shubham Sanjay Madane
 * **Course:** M.Tech CSE (2nd Year)
@@ -9,143 +9,64 @@
 
 ---
 
-## 📂 About This Repository
+## 📂 About
 
-This repository contains all Python lab practicals from **1 to 12**, covering fundamental to intermediate concepts of Python programming. Each practical includes code and explanations.
-
----
-
-## 🧪 List of Practicals
-
-### ✅ Practical 1: Basic Python Programs
-
-* Print statements
-* Variables and data types
-* Simple input/output
+This repository contains Python lab practicals designed to understand core programming concepts including variables, control structures, functions, file handling, and exception handling.
 
 ---
 
-### ✅ Practical 2: Conditional Statements
+## 🧪 Practical List
 
-* if, if-else, nested if
-* Programs based on conditions (even/odd, largest number)
-
----
-
-### ✅ Practical 3: Loops
-
-* for loop, while loop
-* Pattern printing
-* Sum of numbers
-
----
-
-### ✅ Practical 4: Functions
-
-* User-defined functions
-* Arguments and return values
-
----
-
-### ✅ Practical 5: Lists
-
-* List operations
-* Indexing and slicing
-* Built-in functions
-
----
-
-### ✅ Practical 6: Tuples and Sets
-
-* Tuple creation and operations
-* Set operations (union, intersection)
-
----
-
-### ✅ Practical 7: Dictionaries
-
-* Key-value pairs
-* CRUD operations
-* Iteration
-
----
-
-### ✅ Practical 8: Strings
-
-* String methods
-* Palindrome check
-* String manipulation
-
----
-
-### ✅ Practical 9: File Handling
-
-* Reading and writing files
-* Modes (r, w, a)
-* Working with text files
-
----
-
-### ✅ Practical 10: Exception Handling
-
-* try-except block
-* Handling errors
-* Custom exceptions
-
----
-
-### ✅ Practical 11: Object-Oriented Programming (OOP)
-
-* Classes and objects
-* Constructor
-* Inheritance
-* Encapsulation
-
----
-
-### ✅ Practical 12: Modules and Packages
-
-* Importing modules
-* Creating custom modules
-* Using built-in libraries
+| No. | Title                                                                               | Session | CO       | Marks |
+| --- | ----------------------------------------------------------------------------------- | ------- | -------- | ----- |
+| 1   | Introduction to Python and its Installation                                         | S1      | CO1      | 05    |
+| 2   | Create a Simple Hello World Program using Python                                    | S2      | CO1, CO2 | 05    |
+| 3   | Working with Variables and Data Types in Python *(Level: Moderate)*                 | S2      | CO2      | 05    |
+| 4   | Study of Operators (Arithmetic, Comparison, Assignment, Logical, Bitwise, Identity) | S2      | CO1, CO2 | 05    |
+| 5   | Study of Conditional Statements (if, if-else, nested if, if-elif-else)              | S2      | CO1, CO2 | 05    |
+| 6   | Study of Loops (for loop, while loop, nested loops)                                 | S2      | CO1, CO2 | 05    |
+| 7   | Working with Built-in Functions                                                     | S2      | CO1, CO2 | 05    |
+| 8   | Creating User-Defined Functions *(Level: Complex)*                                  | S2      | CO2      | 05    |
+| 9   | Working with Strings, Lists, Tuples & Sets                                          | S2      | CO2      | 05    |
+| 10  | File Handling in Python                                                             | S2      | CO2      | 05    |
+| 11  | Exception Handling in Python                                                        | S2      | CO4      | 05    |
+| 12  | Read CSV File                                                                       | S2      | CO4      | 05    |
+| 13  | Write CSV File                                                                      | S2      | CO4      | 05    |
 
 ---
 
 ## ⚙️ Requirements
 
 * Python 3.x
-* Any IDE (VS Code / PyCharm / Jupyter Notebook)
+* IDE (VS Code / PyCharm / Jupyter Notebook)
 
 ---
 
 ## ▶️ How to Run
 
-1. Clone the repository
+```bash
+# Clone repository
+git clone <your-repo-link>
 
-   ```
-   git clone <your-repo-link>
-   ```
+# Go to directory
+cd python-lab
 
-2. Navigate to folder
-
-   ```
-   cd python-lab
-   ```
-
-3. Run any practical
-
-   ```
-   python practical1.py
-   ```
+# Run file
+python practical1.py
+```
 
 ---
 
-## 📌 Conclusion
+## 📌 Learning Outcomes
 
-This lab submission helps in understanding core Python concepts and building a strong programming foundation.
+* Understand Python basics and syntax
+* Apply control structures and loops
+* Develop modular programs using functions
+* Handle files and exceptions
+* Work with CSV data efficiently
 
 ---
 
 ## 🙌 Author
 
-**Shubham Madane**
+**Shubham Sanjay Madane**
