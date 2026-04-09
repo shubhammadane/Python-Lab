@@ -1,14 +1,7 @@
 # 🐍 Python Lab Submission (Practical 1–13)
 
-## 📘 Student Details
-
-* **Name:** Shubham Sanjay Madane
-* **Course:** M.Tech CSE (2nd Year)
-* **College:** Government College of Engineering, Aurangabad
-* **Roll No:** MT24F05F007
-
----
-
+ 
+ 
 ## 📂 About
 
 This repository contains Python lab practicals designed to understand core programming concepts including variables, control structures, functions, file handling, and exception handling.
