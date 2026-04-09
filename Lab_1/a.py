@@ -1,0 +1,1 @@
+print("a.py lab 1 summision")
