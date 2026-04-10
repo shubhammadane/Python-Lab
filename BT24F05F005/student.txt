@@ -1,4 +1,4 @@
 Name: Sudhanshu Bagde
+Course: Computer Science and Engineering
 Year: 2nd Year
-Course: Computer Science Engineering
-College: Government College Of Engineering, Chhatrapati Sambhajinagar
+College: GECA

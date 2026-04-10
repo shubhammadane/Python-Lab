@@ -1,14 +1,18 @@
-# Practical 1 — Introduction To Python And Its Installation
-# Aim: To study the basic introduction of Python and verify its installation.
+﻿"""Practical 1 - Introduction to Python and its installation."""
 
-
-import sys
 import platform
+import sys
 
-print("===== Python Environment Info =====")
-print("Python Version :", sys.version)
-print("Python Path    :", sys.executable)
-print("Platform       :", platform.system(), platform.release())
-print("Architecture   :", platform.architecture()[0])
-print("")
-print("Installation verified successfully!")
+
+def display_environment_info() -> None:
+    print("===== Python Environment Info =====")
+    print("Python Version :", sys.version)
+    print("Python Path    :", sys.executable)
+    print("Platform       :", platform.system(), platform.release())
+    print("Architecture   :", platform.architecture()[0])
+    print()
+    print("Installation verified successfully!")
+
+
+if __name__ == "__main__":
+    display_environment_info()

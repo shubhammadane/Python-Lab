@@ -1,47 +1,54 @@
-# Practical 8 — Creating User Defined Functions in Python
-# Aim: To create and implement user defined functions in Python.
+﻿"""Practical 8 - Creating user defined functions in Python."""
 
 
-# 1. Basic function
-def area_rectangle(l, w):
-    return l * w
+def area_rectangle(length: int, width: int) -> int:
+    return length * width
 
-print("Area:", area_rectangle(5, 3))
 
-# 2. Default argument
-def greet(name, msg="Hello"):
-    return f"{msg}, {name}!"
+def greet(name: str, message: str = "Hello") -> str:
+    return f"{message}, {name}!"
 
-print(greet("Adarsh"))                   # uses default msg
-print(greet("Subham sir", "Good Morning"))     # custom msg
 
-# 3. *args — variable length arguments
-def add_all(*nums):
-    print(f"Sum of {len(nums)} numbers:", sum(nums))
+def add_all(*numbers: int) -> None:
+    print(f"Sum of {len(numbers)} numbers:", sum(numbers))
 
-add_all(1, 2, 3)
-add_all(10, 20, 30, 40)
 
-# 4. **kwargs — keyword arguments
-def student_profile(**info):
+def student_profile(**info: str) -> None:
     print("\nStudent Profile:")
-    for key, val in info.items():
-        print(f"  {key:<12}: {val}")
+    for key, value in info.items():
+        print(f"  {key:<12}: {value}")
 
-student_profile(name="Alice", roll=101, grade="A")
 
-# 5. Lambda functions
-cube    = lambda x: x ** 3
-is_even = lambda x: x % 2 == 0
+def cube(value: int) -> int:
+    return value ** 3
 
-print("\nCube of 4:", cube(4))
-print("Is 7 even :", is_even(7))
 
-# 6. Recursive function — Factorial
-def factorial(n):
-    if n <= 1:
-        return 1            # base case
-    return n * factorial(n - 1)   # recursive call
+def is_even(value: int) -> bool:
+    return value % 2 == 0
 
-for i in range(1, 7):
-    print(f"  {i}! = {factorial(i)}")
+
+def factorial(number: int) -> int:
+    if number <= 1:
+        return 1
+    return number * factorial(number - 1)
+
+
+def main() -> None:
+    print("Area:", area_rectangle(5, 3))
+    print(greet("Adarsh"))
+    print(greet("Subham sir", "Good Morning"))
+
+    add_all(1, 2, 3)
+    add_all(10, 20, 30, 40)
+
+    student_profile(name="Alice", roll=101, grade="A")
+
+    print("\nCube of 4:", cube(4))
+    print("Is 7 even :", is_even(7))
+
+    for number in range(1, 7):
+        print(f"  {number}! = {factorial(number)}")
+
+
+if __name__ == "__main__":
+    main()

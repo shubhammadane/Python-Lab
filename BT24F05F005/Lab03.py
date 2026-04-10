@@ -1,31 +1,32 @@
-# Practical 3 — Working With Variables and Datatypes in Python
-# Aim: To study and implement variables and different data types in Python.
+﻿"""Practical 3 - Working with variables and datatypes in Python."""
 
 
-roll_no = 101        # int
-pi      = 3.14159    # float
-name    = "Alice"    # str
-is_pass = True       # bool
-z       = 2 + 3j     # complex
-nothing = None       # NoneType
+def main() -> None:
+    roll_number = 101
+    pi_value = 3.14159
+    student_name = "Alice"
+    is_passed = True
+    complex_number = 2 + 3j
+    nothing = None
 
-print(type(roll_no), type(pi),      type(name))
-print(type(is_pass), type(z),       type(nothing))
+    print(type(roll_number), type(pi_value), type(student_name))
+    print(type(is_passed), type(complex_number), type(nothing))
 
-# Multiple assignment
-a = b = c = 0               # all get same value
-x, y, z = 10, 20, 30        # tuple unpacking
-print(x, y, z)
+    first = second = third = 0
+    x_value, y_value, z_value = 10, 20, 30
+    print(x_value, y_value, z_value)
 
-# Type conversion (casting)
-num_str  = "25"
-num_int  = int(num_str)      # str  → int
-num_flt  = float(num_int)    # int  → float
-back_str = str(num_int)      # int  → str
-print(num_int, num_flt, back_str)
+    number_text = "25"
+    number_int = int(number_text)
+    number_float = float(number_int)
+    back_to_text = str(number_int)
+    print(number_int, number_float, back_to_text)
 
-# Dynamic typing demonstration
-var = 10
-print("Type:", type(var))
-var = "now a string"
-print("Type:", type(var))
+    value = 10
+    print("Type:", type(value))
+    value = "now a string"
+    print("Type:", type(value))
+
+
+if __name__ == "__main__":
+    main()

@@ -1,26 +1,31 @@
-# File Handling using 'with'
+﻿"""Practical 10 - File handling using with."""
+
+from pathlib import Path
 
 
-# 1. Writing to a file
-with open("student.txt", "w") as file:
-    file.write("Name: Sudhanshu Bagde\n")
-    file.write("Course: Computer Science and Engineering\n")
-    file.write("Year: 2nd Year\n")
+def main() -> None:
+    file_path = Path(__file__).with_name("student.txt")
 
-print("Data written successfully!\n")
+    with file_path.open("w", encoding="utf-8") as file_handle:
+        file_handle.write("Name: Sudhanshu Bagde\n")
+        file_handle.write("Course: Computer Science and Engineering\n")
+        file_handle.write("Year: 2nd Year\n")
 
-# 2. Reading file
-with open("student.txt", "r") as file:
-    print("Reading File Content:\n")
-    print(file.read())
+    print("Data written successfully!\n")
 
-# 3. Appending data
-with open("student.txt", "a") as file:
-    file.write("College: GECA\n")
+    with file_path.open("r", encoding="utf-8") as file_handle:
+        print("Reading File Content:\n")
+        print(file_handle.read())
 
-print("\nData appended successfully!\n")
+    with file_path.open("a", encoding="utf-8") as file_handle:
+        file_handle.write("College: GECA\n")
 
-# 4. Reading updated file
-with open("student.txt", "r") as file:
-    print("Updated File Content:\n")
-    print(file.read())
+    print("\nData appended successfully!\n")
+
+    with file_path.open("r", encoding="utf-8") as file_handle:
+        print("Updated File Content:\n")
+        print(file_handle.read())
+
+
+if __name__ == "__main__":
+    main()

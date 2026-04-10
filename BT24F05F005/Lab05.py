@@ -1,36 +1,47 @@
-# Practical 5 — Studying if, if-else, Nested if and if-elif-else Ladder
-# Aim: To study and implement conditional statements in Python.
+﻿"""Practical 5 - Studying conditional statements in Python."""
 
 
-# --- if-elif-else ladder: Grade Calculator ---
-marks = int(input("Enter marks (0-100): "))
+def get_integer(prompt: str) -> int:
+    while True:
+        try:
+            return int(input(prompt))
+        except ValueError:
+            print("Please enter a valid integer.")
 
-if marks >= 90:
-    grade = "O (Outstanding)"
-elif marks >= 75:
-    grade = "A+ (Excellent)"
-elif marks >= 60:
-    grade = "A (Very Good)"
-elif marks >= 50:
-    grade = "B (Good)"
-elif marks >= 40:
-    grade = "C (Pass)"
-else:
-    grade = "F (Fail)"
 
-print(f"Marks: {marks} → Grade: {grade}")
+def calculate_grade(marks: int) -> str:
+    if marks >= 90:
+        return "O (Outstanding)"
+    if marks >= 75:
+        return "A+ (Excellent)"
+    if marks >= 60:
+        return "A (Very Good)"
+    if marks >= 50:
+        return "B (Good)"
+    if marks >= 40:
+        return "C (Pass)"
+    return "F (Fail)"
 
-# --- Nested if: Age Category ---
-age = int(input("\nEnter age: "))
 
-if age >= 0:
+def categorize_age(age: int) -> str:
+    if age < 0:
+        return "Invalid age entered!"
     if age < 13:
-        print("Category: Child")
-    elif age < 18:
-        print("Category: Teenager")
-    elif age < 60:
-        print("Category: Adult")
-    else:
-        print("Category: Senior Citizen")
-else:
-    print("Invalid age entered!")
+        return "Category: Child"
+    if age < 18:
+        return "Category: Teenager"
+    if age < 60:
+        return "Category: Adult"
+    return "Category: Senior Citizen"
+
+
+def main() -> None:
+    marks = get_integer("Enter marks (0-100): ")
+    print(f"Marks: {marks} -> Grade: {calculate_grade(marks)}")
+
+    age = get_integer("\nEnter age: ")
+    print(categorize_age(age))
+
+
+if __name__ == "__main__":
+    main()

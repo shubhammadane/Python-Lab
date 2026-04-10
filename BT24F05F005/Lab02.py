@@ -1,22 +1,21 @@
-# Practical 2 — Create a Simple Hello World Program Using Python
-# Aim: To create a simple Hello World program using Python.
+﻿"""Practical 2 - Create a simple Hello World program using Python."""
 
 
-# Basic output
-print("Hello, World!")
+def main() -> None:
+    print("Hello, World!")
+    print("Hello", "World", sep=" | ", end="!\n")
 
-# print() with parameters
-print("Hello", "World", sep=" | ", end="!\n")
+    name = input("Enter your name: ")
+    age = input("Enter your age: ")
 
-# Taking user input
-name = input("Enter your name: ")
-age  = input("Enter your age : ")
+    print(f"\nHello, {name}! You are {age} years old.")
+    print("Welcome to Python Programming!")
 
-# f-string formatting
-print(f"\nHello, {name}! You are {age} years old.")
-print(f"Welcome to Python Programming!")
+    result = 5 + 3
+    print("Result: %d" % result)
+    print("Result: {}".format(result))
+    print(f"Result: {result}")
 
-# Three formatting styles
-print("Result: %d"       % (5 + 3))   # % formatting
-print("Result: {}".format(5 + 3))      # .format() method
-print(f"Result: {5 + 3}")              # f-string
+
+if __name__ == "__main__":
+    main()

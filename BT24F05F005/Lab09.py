@@ -1,47 +1,45 @@
-# Practical 9 — Working With Strings, Lists, Tuples and Sets
-# Aim: To study and implement Strings, Lists, Tuples and Sets in Python.
+﻿"""Practical 9 - Working with strings, lists, tuples and sets."""
 
 
-# ── STRINGS ──────────────────────────────────────────────────────
-s = "Hello, Python World!"
-print(s.upper())
-print(s.lower())
-print("Length  :", len(s))
-print("Slice   :", s[7:13])                  # Python
-print("Reverse :", s[::-1])
-print("Replace :", s.replace("Python", "Beautiful"))
-print("Split   :", s.split(", "))
-print("Find    :", s.find("Python"))
+def main() -> None:
+    text = "Hello, Python World!"
+    print(text.upper())
+    print(text.lower())
+    print("Length  :", len(text))
+    print("Slice   :", text[7:13])
+    print("Reverse :", text[::-1])
+    print("Replace :", text.replace("Python", "Beautiful"))
+    print("Split   :", text.split(", "))
+    print("Find    :", text.find("Python"))
 
-# ── LISTS ─────────────────────────────────────────────────────────
-lst = [40, 10, 30, 50, 20]
-lst.append(60)
-lst.insert(2, 99)
-lst.remove(99)
-lst.sort()
-print("\nList    :", lst)
-print("Sliced  :", lst[1:4])
+    values = [40, 10, 30, 50, 20]
+    values.append(60)
+    values.insert(2, 99)
+    values.remove(99)
+    values.sort()
+    print("\nList    :", values)
+    print("Sliced  :", values[1:4])
+    print("Squares :", [number ** 2 for number in range(1, 6)])
 
-squares = [x**2 for x in range(1, 6)]      # list comprehension
-print("Squares :", squares)
+    numbers = (1, 2, 3, 2, 4, 2)
+    print("\nTuple   :", numbers)
+    print("Count 2 :", numbers.count(2))
+    print("Index 3 :", numbers.index(3))
 
-# ── TUPLES ────────────────────────────────────────────────────────
-t = (1, 2, 3, 2, 4, 2)
-print("\nTuple   :", t)
-print("Count 2 :", t.count(2))
-print("Index 3 :", t.index(3))
+    first, second, *rest = numbers
+    print("Unpack  :", first, second, rest)
 
-a, b, *rest = t                             # tuple unpacking
-print("Unpack  :", a, b, rest)
+    set_a = {1, 2, 3, 4, 5}
+    set_b = {4, 5, 6, 7, 8}
+    print("\nUnion        :", set_a | set_b)
+    print("Intersection :", set_a & set_b)
+    print("Difference   :", set_a - set_b)
+    print("Sym Diff     :", set_a ^ set_b)
 
-# ── SETS ──────────────────────────────────────────────────────────
-A = {1, 2, 3, 4, 5}
-B = {4, 5, 6, 7, 8}
-print("\nUnion        :", A | B)
-print("Intersection :", A & B)
-print("Difference   :", A - B)
-print("Sym Diff     :", A ^ B)
+    set_a.add(10)
+    set_a.discard(1)
+    print("Updated A    :", set_a)
 
-A.add(10)
-A.discard(1)
-print("Updated A    :", A)
+
+if __name__ == "__main__":
+    main()
